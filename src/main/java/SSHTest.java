@@ -17,7 +17,7 @@ public class SSHTest {
         String user = "sshuser";
         String password = "sshpassword";
         String dbUserName = "mysqlUserName";
-        String dbPassowrd = "mysqlPassowr";
+        String dbPassowrd = "mysqlPassowrd";
 //        String url = "jdbc:mysql://localhost:" + lport + "/mydb";
 
         String url = "jdbc:mysql://localhost:" + lport + "/mydb?" +
