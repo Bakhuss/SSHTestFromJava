@@ -12,10 +12,10 @@ public class SSHTest {
     public static void main(String[] args) throws Exception {
         int lport = 5656;
         String rhost = "remote server";
-        String host = "ssh host";
+        String sshHost = "ssh host";
         int rport = 3306;
-        String user = "sshuser";
-        String password = "sshpassword";
+        String sshUser = "sshuser";
+        String sshPassword = "sshpassword";
         String dbUserName = "mysqlUserName";
         String dbPassowrd = "mysqlPassowrd";
 //        String url = "jdbc:mysql://localhost:" + lport + "/mydb";
@@ -35,8 +35,8 @@ public class SSHTest {
             Properties config = new Properties();
             config.put("StrictHostKeyChecking", "no");
             JSch jSch = new JSch();
-            session = jSch.getSession(user, host, 22);
-            session.setPassword(password);
+            session = jSch.getSession(sshUser, sshHost, 22);
+            session.setPassword(sshPassword);
             session.setConfig(config);
             session.connect();
             System.out.println("Connected");
@@ -66,10 +66,6 @@ public class SSHTest {
                 System.out.println("Closing SSH Connection");
                 session.disconnect();
             }
-
-
         }
-
     }
-
 }
